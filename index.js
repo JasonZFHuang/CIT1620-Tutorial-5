@@ -31,7 +31,7 @@ dispDiv.addEventListener("click",function(ev){
         }else {
             newImg.style.height = stHeight.value +"px";
         }
-        newImg.style.left = ev.pageX - (parseInt(newImg.style.height, 10)/2) + "px";
+        newImg.style.left = ev.pageX - (newImg.clientWidth/2) + "px";
         newImg.style.top = ev.pageY - (parseInt(newImg.style.height, 10)/2) + "px";
     }
 });
@@ -51,7 +51,7 @@ stInp.addEventListener("keyup", function(ev){
 
 dispDiv.addEventListener("mousemove", function(ev){
     stC.style.top = ev.pageY - 25 + "px"
-    stC.style.left = ev.pageX -25+ "px"
+    stC.style.left = ev.pageX - (stC.clientWidth/2)+ "px"
 });
 
 function changeImage(el){
